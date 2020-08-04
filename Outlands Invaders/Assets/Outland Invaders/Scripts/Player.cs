@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] float speed = 20f;
     [SerializeField] float xLimit = 9f;
     [SerializeField] float yLimit = 8f;
@@ -15,6 +16,9 @@ public class Player : MonoBehaviour
     [SerializeField] float inputPitchFactor = -30f;
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float inputRollFactor = -20f;
+
+    [Header("FX")]
+    [SerializeField] GameObject explosionFX = default;
 
     private float xInput;
     private float yInput;
@@ -56,8 +60,18 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collided: " + other.name);
-        isDead = true;
+        if (!isDead)
+        {
+            Die();
+        }
     }
 
+    private void Die()
+    {
+        isDead = true;
+        explosionFX.SetActive(true);
+        GetComponent<MeshRenderer>().enabled = false;
+        Time.timeScale = 0.5f;
+        FindObjectOfType<LevelLoader>().RestartLevel();
+    }
 }
