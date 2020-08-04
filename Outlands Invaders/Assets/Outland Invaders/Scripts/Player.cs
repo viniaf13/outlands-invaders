@@ -18,11 +18,15 @@ public class Player : MonoBehaviour
 
     private float xInput;
     private float yInput;
+    private bool isDead = false;
 
     void Update()
     {
-        Translate();
-        Rotate();
+        if (!isDead)
+        {
+            Translate();
+            Rotate();
+        }
     }
 
     private void Translate()
@@ -48,6 +52,12 @@ public class Player : MonoBehaviour
         float roll = xInput * inputRollFactor; 
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Collided: " + other.name);
+        isDead = true;
     }
 
 }
