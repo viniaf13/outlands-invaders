@@ -6,8 +6,19 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] float loadDelay = 1.5f;
+    [SerializeField] int currentSceneIndex;
 
-    private int currentSceneIndex;
+    private void Awake()
+    {
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -19,11 +30,17 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(currentSceneIndex));
     }
 
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(currentSceneIndex+1);
+        currentSceneIndex++;
+    }
+
     private IEnumerator LoadLevel(int sceneIndex)
     {
         yield return new WaitForSeconds(loadDelay);
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneIndex);
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
-
 }
