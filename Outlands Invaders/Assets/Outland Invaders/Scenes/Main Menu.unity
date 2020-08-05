@@ -631,6 +631,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1205238977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5152575777054570846, guid: c9a99c42fff15cb43a6f5268a6de180b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5152575778190959999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1205238979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205238977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3b43c46a4bb9143be697d28a6e648d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379631792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +3604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913882230376733918, guid: 0ef62d47675033d44bcccf2039cc27cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef62d47675033d44bcccf2039cc27cc, type: 3}

@@ -97,6 +97,8 @@ public class Player : MonoBehaviour
         explosionFX.SetActive(true);
         GetComponent<MeshRenderer>().enabled = false;
         Time.timeScale = 0.5f;
+        ActivateGuns(false);
+        FindObjectOfType<ScoreBoard>().EndScoreSession();
         FindObjectOfType<LevelLoader>().RestartLevel();
     }
 }
