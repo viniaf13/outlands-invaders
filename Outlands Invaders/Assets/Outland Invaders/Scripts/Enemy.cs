@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject enemyFX = default;
+    private void OnParticleCollision(GameObject other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject enemyExplosion = Instantiate(enemyFX, transform.position, Quaternion.identity) as GameObject;
+        Destroy(enemyExplosion, 2f);
+        Destroy(gameObject);
     }
 }
