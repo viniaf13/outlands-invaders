@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float inputRollFactor = -20f;
 
+    [Header("Guns")]
+    [SerializeField] GameObject[] guns = default;
+
     [Header("FX")]
     [SerializeField] GameObject explosionFX = default;
 
@@ -30,6 +33,7 @@ public class Player : MonoBehaviour
         {
             Translate();
             Rotate();
+            Shoot();
         }
     }
 
@@ -56,6 +60,27 @@ public class Player : MonoBehaviour
         float roll = xInput * inputRollFactor; 
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            ActivateGuns(true);
+        }
+        else
+        {
+            ActivateGuns(false);
+        }
+    }
+
+    private void ActivateGuns(bool state)
+    {
+        foreach (GameObject gun in guns)
+        {
+            var gunEmissionModule = gun.GetComponent<ParticleSystem>().emission;
+            gunEmissionModule.enabled = state;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
