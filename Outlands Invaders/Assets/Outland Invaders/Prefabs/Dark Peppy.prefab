@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2728280373921515005}
   - component: {fileID: 1070830880237004351}
   - component: {fileID: 6120542259512542031}
-  - component: {fileID: 819592886}
-  - component: {fileID: 819592885}
-  - component: {fileID: 819592884}
+  - component: {fileID: 915756146}
+  - component: {fileID: 915756145}
+  - component: {fileID: 915756144}
   m_Layer: 0
   m_Name: Dark Peppy
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &819592886
+--- !u!54 &915756146
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &819592885
+--- !u!95 &915756145
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &819592884
+--- !u!114 &915756144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyFX: {fileID: 3778931574948218184, guid: 147b7fc5d62ace64b910e59b408d3183, type: 3}
   pointsOnDeath: 100
-  health: 2
+  health: 3
 --- !u!1 &1304782534602094933
 GameObject:
   m_ObjectHideFlags: 0

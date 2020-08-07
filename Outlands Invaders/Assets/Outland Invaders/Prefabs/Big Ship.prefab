@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1161281047015840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.717, y: 0.231, z: -1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4207690953640610}
   m_RootOrder: 3
@@ -70,7 +70,7 @@ Transform:
   m_GameObject: {fileID: 1276148733151968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.717, y: 0.231, z: -1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4207690953640610}
   m_RootOrder: 2
@@ -114,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 1460715477365028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.29, z: 2.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4207690953640610}
   m_RootOrder: 1
@@ -158,7 +158,7 @@ Transform:
   m_GameObject: {fileID: 1600940368654478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.16, z: -0.15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4207690953640610}
   m_RootOrder: 4
@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 23729984508991034}
   - component: {fileID: 1685555833}
   - component: {fileID: 3942376034562916144}
+  - component: {fileID: 5587283122261884662}
   m_Layer: 0
   m_Name: Big Ship
   m_TagString: Untagged
@@ -205,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 1734771206656390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 6}
+  m_LocalScale: {x: 12, y: 12, z: 6}
   m_Children:
   - {fileID: 4207690953640610}
   m_Father: {fileID: 0}
@@ -270,8 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a875805ab214c834fb4dab335293f0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFX: {fileID: 0}
-  pointsOnDeath: 100
+  enemyFX: {fileID: 3778931574948218184, guid: 819f85cd7df14914ba78c925678fabe3, type: 3}
+  pointsOnDeath: 275
   health: 8
 --- !u!54 &3942376034562916144
 Rigidbody:
@@ -289,6 +290,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &5587283122261884662
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734771206656390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1785570626129934
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +335,7 @@ Transform:
   m_GameObject: {fileID: 1785570626129934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.268, z: -1.231}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4207690953640610}
   m_RootOrder: 0
