@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 2728280373921515005}
   - component: {fileID: 1070830880237004351}
   - component: {fileID: 6120542259512542031}
+  - component: {fileID: 819592886}
+  - component: {fileID: 819592885}
+  - component: {fileID: 819592884}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Dark Peppy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923423528426703429}
-  m_LocalRotation: {x: -0.030524436, y: 0.95918477, z: -0.25701228, w: 0.113918975}
+  m_LocalRotation: {x: -0.030519675, y: 0.95918447, z: -0.25701264, w: 0.113922134}
   m_LocalPosition: {x: -34.9, y: 121.5, z: -23.6}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4430704213772166042}
   m_Father: {fileID: 0}
@@ -80,6 +83,56 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &819592886
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923423528426703429}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &819592885
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923423528426703429}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &819592884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923423528426703429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a875805ab214c834fb4dab335293f0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFX: {fileID: 3778931574948218184, guid: 147b7fc5d62ace64b910e59b408d3183, type: 3}
+  pointsOnDeath: 100
+  health: 2
 --- !u!1 &1304782534602094933
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 1304782534602094933}
   m_LocalRotation: {x: -0.3748688, y: 0.16248494, z: -0.35503516, w: 0.84084606}
   m_LocalPosition: {x: 0.664, y: 0.674, z: -2.158}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4430704213772166042}
   m_RootOrder: 3
@@ -150,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 1426193051495864489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.09, z: -0.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4430704213772166042}
   m_RootOrder: 0
@@ -229,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 4538928539908706484}
   m_LocalRotation: {x: -0.3987491, y: 0, z: 0, w: 0.91706014}
   m_LocalPosition: {x: 0, y: 0.921, z: -2.21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4430704213772166042}
   m_RootOrder: 2
@@ -273,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 5139999703725929342}
   m_LocalRotation: {x: -0.3748688, y: -0.16248494, z: 0.35503516, w: 0.84084606}
   m_LocalPosition: {x: -0.664, y: 0.674, z: -2.158}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4430704213772166042}
   m_RootOrder: 4
@@ -317,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 8433880916147775654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.01, z: -2.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4430704213772166042}
   m_RootOrder: 1
