@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] float loadDelay = 1.5f;
     [SerializeField] int currentSceneIndex;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (FindObjectsOfType(GetType()).Length > 1)
         {
@@ -18,7 +18,7 @@ public class LevelLoader : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-    }
+    }*/
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class LevelLoader : MonoBehaviour
 
     public void RestartLevel()
     {
-        StartCoroutine(LoadLevel(currentSceneIndex));
+        StartCoroutine(LoadLevel(currentSceneIndex, loadDelay));
     }
 
     public void LoadNextLevel()
@@ -36,9 +36,20 @@ public class LevelLoader : MonoBehaviour
         currentSceneIndex++;
     }
 
-    private IEnumerator LoadLevel(int sceneIndex)
+    public void LoadWinScreen()
     {
-        yield return new WaitForSeconds(loadDelay);
+        StartCoroutine(LoadLevel(currentSceneIndex+1, loadDelay * 2));
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+        currentSceneIndex = 0;
+    }
+
+    private IEnumerator LoadLevel(int sceneIndex, float delay)
+    {
+        yield return new WaitForSeconds(delay);
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneIndex);
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

@@ -31,6 +31,7 @@ public class ScoreBoard : MonoBehaviour
 
     public void EndScoreSession()
     {
+        PlayerPrefsController.SetCurrentScore(totalScore);
         if (totalScore > maxScore)
         {
             PlayerPrefsController.SetHighscore(totalScore);
