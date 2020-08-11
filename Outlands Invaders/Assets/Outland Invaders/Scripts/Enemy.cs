@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
         
         if (gameObject.tag == "Boss")
         {
-            Time.timeScale = 0.5f;
             FindObjectOfType<ScoreBoard>().EndScoreSession();
             FindObjectOfType<LevelLoader>().LoadWinScreen();
         }

@@ -38,7 +38,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadWinScreen()
     {
-        StartCoroutine(LoadLevel(currentSceneIndex+1, loadDelay * 2));
+        StartCoroutine(LoadLevel(currentSceneIndex+1, loadDelay * 4));
     }
 
     public void LoadMainMenu()
