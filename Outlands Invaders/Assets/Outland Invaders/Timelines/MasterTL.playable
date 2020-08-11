@@ -845,7 +845,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Admiral Slackbar
   - m_Version: 1
-    m_Start: 60.35
+    m_Start: 58.966666666666676
     m_ClipIn: 0
     m_Asset: {fileID: -6785300816695112833}
     m_Duration: 4.256303854875277
@@ -4177,7 +4177,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: VO_Holy Mother
   - m_Version: 1
-    m_Start: 60.35
+    m_Start: 58.96666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 4130274454518061974}
     m_Duration: 4.256303854875283
